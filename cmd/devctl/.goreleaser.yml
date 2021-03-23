@@ -15,6 +15,9 @@ builds:
       - arm64
     binary: devctl
     mod_timestamp: '{{ .CommitTimestamp }}'
+    ldflags:
+      - -s -w -X 'main.version=' -X 'main.commit=' -X 'main.date=' -X 'main.goVersion=' 
+      - ./usemsan=-msan
 archives:
   - replacements:
       darwin: macos
