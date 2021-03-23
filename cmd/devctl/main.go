@@ -11,5 +11,5 @@ var (
 
 func main() {
 	fmt.Println("---")
-	fmt.Printf("Version:\t%s\nCommit:\t%s\nDate:\t%s\nGo Version:\t%s\n", version, commit, date, goVersion)
+	fmt.Printf("Version:\t%s\nCommit:\t\t%s\nDate:\t\t%s\nGo Version:\t%s\n", version, commit, date, goVersion)
 }
