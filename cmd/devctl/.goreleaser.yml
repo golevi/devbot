@@ -16,8 +16,7 @@ builds:
     binary: devctl
     mod_timestamp: '{{ .CommitTimestamp }}'
     ldflags:
-      - -s -w -X 'main.version=' -X 'main.commit=' -X 'main.date=' -X 'main.goVersion=' 
-      - ./usemsan=-msan
+      - -s -w -X main.version={{.Version}} -X main.commit={{.ShortCommit}} -X main.date={{.Date}} -X main.goVersion=go_1.16
 archives:
   - replacements:
       darwin: macos
